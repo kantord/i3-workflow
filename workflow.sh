@@ -25,12 +25,12 @@ run_custom_commands_of() {
 
 run_editor_in_directory_of() {
     PROJECT=$1
-    gvim +":cd $PROJECTS/$PROJECT" > /dev/null &
+    urxvt --hold -e "nvim" -cd "$PROJECTS/$PROJECT" > /dev/null &
 }
 
 open_terminal_in_directory_of() {
     PROJECT=$1
-    terminator --working-directory "$PROJECTS/$PROJECT" > /dev/null &
+    urxvt -cd "$PROJECTS/$PROJECT" > /dev/null &
 }
 
 rename_workspace_to_match() {
