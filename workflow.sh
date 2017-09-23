@@ -25,7 +25,7 @@ run_custom_commands_of() {
 
 run_editor_in_directory_of() {
     PROJECT=$1
-    urxvt -cd "$PROJECTS/$PROJECT" -hold -e nvim "$PROJECTS/$PROJECT" > /dev/null &
+    urxvt -cd "$PROJECTS/$PROJECT" -hold -e zsh -c 'source ~/.zshrc; nvim "$PROJECTS/$PROJECT"' > /dev/null &
 }
 
 open_terminal_in_directory_of() {
